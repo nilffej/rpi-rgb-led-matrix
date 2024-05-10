@@ -1,0 +1,213 @@
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Press CTRL-C to stop sample
+Exiting
+
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Press CTRL-C to stop sample
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x7499e4f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.26841&longitude=-83.73837&current=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=ms&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1&format=flatbuffers (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7499e4f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 94, in <module>
+    if (not time_weather.process()):
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/samplebase.py", line 76, in process
+    self.run()
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 29, in run
+    weather_text = self.get_weather()
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 85, in get_weather
+    response = self.openmeteo.weather_api(url, params=params)[0]
+  File "/usr/local/lib/python3.9/dist-packages/openmeteo_requests/Client.py", line 47, in weather_api
+    return self._get(WeatherApiResponse, url, params)
+  File "/usr/local/lib/python3.9/dist-packages/openmeteo_requests/Client.py", line 27, in _get
+    response = self.session.get(url, params=params)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.26841&longitude=-83.73837&current=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=ms&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1&format=flatbuffers (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x7499e4f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Press CTRL-C to stop sample
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 411, in connect
+    self.sock = ssl_wrap_socket(
+  File "/usr/lib/python3/dist-packages/urllib3/util/ssl_.py", line 449, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(
+  File "/usr/lib/python3/dist-packages/urllib3/util/ssl_.py", line 493, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+  File "/usr/lib/python3.9/ssl.py", line 500, in wrap_socket
+    return self.sslsocket_class._create(
+  File "/usr/lib/python3.9/ssl.py", line 1040, in _create
+    self.do_handshake()
+  File "/usr/lib/python3.9/ssl.py", line 1309, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1123)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.26841&longitude=-83.73837&current=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=ms&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1&format=flatbuffers (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1123)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 94, in <module>
+    if (not time_weather.process()):
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/samplebase.py", line 76, in process
+    self.run()
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 29, in run
+    weather_text = self.get_weather()
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 85, in get_weather
+    response = self.openmeteo.weather_api(url, params=params)[0]
+  File "/usr/local/lib/python3.9/dist-packages/openmeteo_requests/Client.py", line 47, in weather_api
+    return self._get(WeatherApiResponse, url, params)
+  File "/usr/local/lib/python3.9/dist-packages/openmeteo_requests/Client.py", line 27, in _get
+    response = self.session.get(url, params=params)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 514, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.26841&longitude=-83.73837&current=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=ms&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1&format=flatbuffers (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: certificate is not yet valid (_ssl.c:1123)')))
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Press CTRL-C to stop sample
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0x749e24f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.26841&longitude=-83.73837&current=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=ms&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1&format=flatbuffers (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x749e24f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 94, in <module>
+    if (not time_weather.process()):
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/samplebase.py", line 76, in process
+    self.run()
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 29, in run
+    weather_text = self.get_weather()
+  File "/home/pi/Desktop/rpi-rgb-led-matrix/bindings/python/main/time-weather.py", line 85, in get_weather
+    response = self.openmeteo.weather_api(url, params=params)[0]
+  File "/usr/local/lib/python3.9/dist-packages/openmeteo_requests/Client.py", line 47, in weather_api
+    return self._get(WeatherApiResponse, url, params)
+  File "/usr/local/lib/python3.9/dist-packages/openmeteo_requests/Client.py", line 27, in _get
+    response = self.session.get(url, params=params)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 555, in get
+    return self.request('GET', url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='api.open-meteo.com', port=443): Max retries exceeded with url: /v1/forecast?latitude=42.26841&longitude=-83.73837&current=temperature_2m&temperature_unit=fahrenheit&wind_speed_unit=ms&precipitation_unit=inch&timezone=America%2FNew_York&forecast_days=1&format=flatbuffers (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0x749e24f0>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
+Suggestion: to slightly improve display update, add
+	isolcpus=3
+at the end of /boot/cmdline.txt and reboot (see README.md)
